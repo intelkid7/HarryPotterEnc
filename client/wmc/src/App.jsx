@@ -20,6 +20,7 @@ import SpellsDetails from './components/Details/SpellsDetails';
 import HouseQuize from './components/Quizs/HouseQuize';
 import CreateCharacter from './components/Admin/CreateCharacter';
 import CreateWand from './components/Admin/createWand';
+import About from './components/About';
 
 function App() {
 
@@ -29,6 +30,7 @@ function App() {
         <Route path="/createCharacter" element={<CreateCharacter />} />
         <Route path="/createWand" element={<CreateWand />} />
         <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
         <Route path="/explore" element={<Explore />} />
         <Route path="/books" element={<Books />} />
         <Route path="/characters" element={<Characters />} />
