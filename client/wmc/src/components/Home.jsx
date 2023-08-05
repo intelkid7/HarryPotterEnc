@@ -19,8 +19,8 @@ export default function Home() {
 
       <div id="fdivp">
         <div id='fdivp2'>
-          <div id='fdiv'>
-            <div id='fdiv2'>
+          <div id='fdiv' className='row'>
+            <div id='fdiv2' className='col-lg-6'>
               <h1 id='fdivhead' >Your own magical Library</h1>
               <p id='fpara'>Explore the wizarding world from your desk. Roam into the
                 library of Hogwarts and dive deep into the wizaring world. Creatures, Wands,
@@ -28,7 +28,9 @@ export default function Home() {
                 your spells and try them out! Discuss with your friends on an online community, your
                 wizarding journey is just a click away!</p>
             </div>
-            <img id='spellbook' src="/Images/spellbook.png" alt="" />
+            <div className='col-lg-6'>
+              <img id='spellbook' src="/Images/spellbook.png" alt="" />
+            </div>
           </div>
         </div>
       </div>
