@@ -1,0 +1,539 @@
+body {
+    /* height: 1000vh; */
+    background: linear-gradient(rgb(0, 0, 0), rgb(0, 17, 44));
+    /* background-image: url(images/hogwartscastle.jpg); */
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+canvas {
+    height: 100%;
+    width: 100%;
+    /* border: solid; */
+    border-color: aliceblue;
+}
+
+bgvideo {
+    display: flex;
+    position: absolute;
+}
+
+.logo {
+    display: flex;
+    margin-left: -2rem;
+}
+
+.logo img {
+    width: 11rem;
+    border-radius: 100px;
+
+}
+
+.logo img:hover {
+    filter: drop-shadow(0px 0px 8px rgb(251, 255, 0));
+    cursor: none;
+}
+
+.navigation {
+    color: aliceblue;
+}
+
+/* #my-navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: none;
+    width: 100%;
+    z-index: 1;
+} */
+
+.navbar{
+    display: flex;
+    background: none;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background: transparent !important;
+}
+
+.navlist {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    width: 100%;
+    background: none;
+}
+
+.navlist li {
+    padding-inline: 1rem;
+}
+
+.navlist a {
+    text-decoration: none;
+    color: aliceblue;
+    font-size: 1.2rem;
+    font-family: 'Elsie Swash Caps', cursive;
+    z-index: 1;
+}
+
+.navlist a:hover{
+    color: yellow;
+    text-shadow: 0 0 11px yellow;
+    cursor: none;
+    z-index: 1;
+}
+
+.searchbar {
+    width: 27%;
+    border: none;
+    outline: none;
+}
+
+.search {
+    background: none;
+    border: none;
+    color: aliceblue;
+    border-bottom: solid;
+    border-width: 1px;
+    width: 11rem;
+    font-family: 'Elsie Swash Caps', cursive;
+    font-size: 1.3rem;
+    outline: none;
+}
+
+.srchbtn {
+    background: none;
+    color: aliceblue;
+    font-family: 'Elsie Swash Caps', cursive;
+    cursor: pointer;
+    font-size: 1.2rem;
+    border: none;
+    /* border-width: 0.05rem;
+    border-radius: 20px; */
+    /* padding: 5px 10px; */
+    /* align-items: center;
+    justify-content: center;
+    text-align: center; */
+}
+
+
+
+.srchbtn:hover {
+    color: yellow;
+    text-shadow: 0 0 11px yellow;
+    cursor: none;
+}
+
+.bgeffect {
+    display: flex;
+    /* position: absolute; */
+    scale: 0.2;
+    /* margin-top: 1rem; */
+    /* border: solid; */
+    /* border-color: aliceblue; */
+    height: 100%;
+    opacity: 70%;
+}
+
+.trail {
+    width: 1.37px;
+    height: 1.37px;
+    border-radius: 50px;
+    /* border: 0.5px solid rgb(255, 255, 255); */
+    filter: drop-shadow(0 0 23px white);
+    box-shadow: 0 0 6px rgb(0, 255, 238);
+    background: rgb(0, 204, 255);
+    position: absolute;
+    animation: come 0.37s linear forwards;
+}
+
+.trail2 {
+    width: 1.37px;
+    height: 1.37px;
+    border-radius: 50px;
+    /* border: 1px solid rgb(255, 255, 255); */
+    filter: drop-shadow(0 0 23px white);
+    box-shadow: 0 0 6px rgb(0, 242, 255);
+    background: rgb(0, 217, 255);
+    position: absolute;
+    animation: come0 0.37s linear forwards;
+}
+
+@keyframes come {
+    0% {
+        transform: scale(0);
+    }
+    10% {
+        transform: scale(1) translateY(0px);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1) translateX(-20px);
+        opacity: 0;
+    }
+}
+
+@keyframes come0 {
+    0% {
+        transform: scale(0);
+    }
+    10% {
+        transform: scale(1) translateY(0px);
+        opacity: 1  ;
+    }
+    100% {
+        transform: scale(1) translateY(-20px);
+        opacity: 0;
+    }
+}
+
+.sidebar {
+    display: flex;
+    font-family: 'Elsie Swash Caps', cursive;
+}
+
+/* card flip css */
+
+.thecard{
+    position: relative;
+    transform-style: preserve-3d;
+    transition: all 0.5s ease;
+}
+
+.thecard:hover{
+    transform: rotateY(180deg);
+}
+
+.thefront{
+    /* width: 100%;
+    height: 100%; */
+    width: 274px;
+    height: 432px; 
+    border-radius: 10px;
+    /* position: absolute;  */
+    backface-visibility: hidden;
+}
+
+.theback{
+    position: absolute;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+}
+
+/* Add to favorite button and more details  */
+
+.ch-btn {
+    text-decoration: none;
+    color: aliceblue;
+    font-size: 1.1rem;
+    font-family: 'Elsie Swash Caps', cursive;
+}
+
+.ch-btn:hover{
+    color: yellow;
+    text-shadow: 0 0 11px yellow;
+    cursor: none;
+}
+
+/* skeleton */
+
+.skeleton{
+    animation: skeleton-loading 1s linear infinite alternate;
+}
+
+@keyframes skeleton-loading{
+    0%{
+        background: hsl(200, 3%, 17%);
+    }
+    100%{
+        background: hsl(0, 0%, 9%);
+    }
+}
+
+/* Explore dialog screen div */
+
+.dialog-div{
+    font-size: large;
+    padding: 0 17%;
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+}
+
+.vertical-center {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+
+  /* Title  */
+
+  .title {
+    font-size: 3rem;
+    font-family: 'Playfair Display', serif;
+    color: aliceblue;
+}
+
+/* font 1 */
+.font1{
+    font-family: 'Elsie Swash Caps', cursive;
+}
+
+.font2{
+      font-family: 'Playfair Display', serif;
+}
+
+#libvid {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin-top: -7.5rem;
+    opacity: 0.7;
+    z-index: -1;
+}
+
+#head01 {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    height: 70%;
+    /* top: 15rem; */
+    color: aliceblue;
+    font-family: 'Elsie Swash Caps', cursive;
+    font-size: 3rem;
+    /* margin-top: -30rem; */
+    animation: float 3s ease-out infinite forwards;
+}
+
+@keyframes float {
+    0% { transform: translate(0,  0px); }
+    50%  { transform: translate(0, 8px); }
+    100%   { transform: translate(0, -0px); }  
+}
+
+@keyframes float2 {
+    0% { transform: translate(0,  0px); }
+    50%  { transform: translate(0, 15px); }
+    100%   { transform: translate(0, -0px); }  
+}
+
+#head02 {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    /* height: 40rem; */
+    /* top: 20rem; */
+    color: aliceblue;
+    font-family: 'Elsie Swash Caps', cursive;
+    font-size: 2rem; 
+    /* margin-top: -10rem; */
+}
+
+#head02:hover {
+    color: yellow;
+    text-shadow: 0 0 11px yellow;
+    cursor: none;
+}
+
+#fdivp {
+    padding: 4rem;
+    align-items: center;
+}
+
+#fdivp2 {
+    background-image: url("/public/Page03.png");
+    background-size: 100%;
+    border-radius: 10px;
+    align-items: center;
+    box-shadow: 0 0 1600px rgb(253, 207, 0);
+
+}
+
+#fdiv {
+    display: flex;
+    color: aliceblue;
+    background: rgba(0,0,0,0.4);
+    align-items: center;
+    justify-content: center;
+    font-family: 'Elsie Swash Caps', cursive;
+    font-size: 2rem;
+    /* height: 30rem; */
+    padding: 4rem;
+    border-radius: 10px;
+}
+
+#fdiv2 {
+    width: 50%;
+    align-items: center;
+}
+
+#fdivhead {
+    text-shadow: 0 0 8px aliceblue;
+}
+
+#fpara {
+    color: rgb(255, 234, 0);
+    text-shadow: 0 0 8px rgb(217, 255, 0);
+    font-size: 1.7rem;
+    font-family: 'Lancelot', cursive;
+}
+
+#spellbook {
+    width: 50%;
+    scale: 0.9;
+    animation: float2 2s ease-out infinite forwards;
+}
+
+.maindiv {
+    height: 42rem;
+    width: 100%;
+    /* background-color: aliceblue; */
+    /* background: url(/client/wmc/public/Library.mp4); */
+}
+
+.reg-div-1 {
+    display: flex;
+    /* position: absolute; */
+    flex-direction: column;
+    color: rgb(40, 0, 0);
+    text-align: center;
+    /* font-family: 'Elsie Swash Caps', cursive; */
+    background: none;
+    background-image: url(riddle.png);
+    /* background-size: cover; */
+    height: 100vh;
+    padding: 7rem 10rem;
+    align-items: center;
+    justify-content: center;
+}
+
+#reghead0 {
+    opacity: 0;
+    font-family: 'Estonia', cursive;
+    font-size: 4rem;
+    animation: fade-in 7s ease-out 1s forwards;
+    /* animation: fade-out 7s ease-out 1s forwards; */
+    /* animation-delay: 10s; */
+}
+
+.reg-head-1 {
+    opacity: 0;
+    font-family: 'Estonia', cursive;
+    font-size: 4rem;
+    animation: fade-in 6.5s ease-out 7s forwards;
+    margin-top: 7rem;
+    /* animation: fade-out 6.5s ease-out 7s forwards; */
+}
+
+.reg-input {
+    opacity: 0;
+    background: none;
+    border: none;
+    font-family: 'La Belle Aurore', cursive;
+    font-size: 2rem;
+    text-align: center;
+    outline: none;
+    /* border: solid; */
+    width: 30rem;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid;
+    animation: fade-in 6.5s ease-out 7s forwards;
+    /* animation: fade-out 6.5s ease-out 7s forwards; */
+}
+
+.reg-button {
+    opacity: 0;
+    margin-top: 2rem;
+    animation: fade-in 6.5s ease-out 7s forwards;
+    /* animation: fade-out 6.5s ease-out 7s forwards; */
+    font-family: 'La Belle Aurore', cursive;
+    font-size: 2.5rem;
+    border: none;
+    background: none;
+    width: fit-content;
+    justify-content: center;
+}
+
+.reg-head-2 {
+    opacity: 0;
+    font-family: 'La Belle Aurore', cursive;
+    font-size: 4rem;
+    animation: fade-in 6.5s ease-out 7s forwards;
+    /* animation: fade-out 6.5s ease-out 7s forwards; */
+    /* margin-top: 12rem; */
+}
+
+#subbut {
+    animation: fade-in 3.5s ease-out 7s forwards;
+}
+
+.nbdiv {
+    opacity: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: fade-in 3.5s ease-out 7s forwards;
+    width: 50%;
+    text-align: center;
+}
+
+#nbdiv {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+@keyframes fade-in {
+    100% {
+        opacity: 100%;
+    }
+}
+
+@keyframes fade-out {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.startbut {
+    align-items: center;
+    justify-content: center;
+}
+
+.textclass {
+    color: black;
+}
+
+#subbut01 {
+    width: 50%;
+}
+
+#backbut01 {
+    width: 50%;
+}
+
+#ddiv {
+    height: 30rem;
+    color: aliceblue;
+}
