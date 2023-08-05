@@ -379,7 +379,7 @@ bgvideo {
 }
 
 #fdiv2 {
-    width: 50%;
+    /* width: 50%; */
     align-items: center;
 }
 
@@ -395,7 +395,7 @@ bgvideo {
 }
 
 #spellbook {
-    width: 50%;
+    width: 100%;
     scale: 0.9;
     animation: float2 2s ease-out infinite forwards;
 }
