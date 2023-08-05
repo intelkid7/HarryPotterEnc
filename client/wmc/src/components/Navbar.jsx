@@ -79,7 +79,7 @@ export default function Navbar() {
           </button>
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-lg-0 navlist">
-              <li className='nav-item'><NavLink className='nav-link' to="#">About Us</NavLink></li>
+              <li className='nav-item'><NavLink className='nav-link' to="/about">About Us</NavLink></li>
               <li className='nav-item'><NavLink className='nav-link' to="#">Home</NavLink></li>
               <li className='nav-item'><NavLink className='nav-link' to="#" id="cu">Contact Us</NavLink></li>
               <li className='nav-item'><NavLink className='nav-link' to="#" onClick={handleClickOpen} id="cu">Explore</NavLink></li>
