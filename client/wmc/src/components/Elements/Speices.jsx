@@ -4,12 +4,18 @@ import Sidebar from '../Sidebar';
 import axios from 'axios';
 import { useAuth } from '../../contexts/auth';
 import {toast} from 'react-hot-toast';
+import Spinner from './Spinner';
+import { Link } from 'react-router-dom';
+import StarIcon from '@mui/icons-material/Star';
+
 
 
 export default function Species() {
 
     const [species, setSpecies] = useState([]);
     const [page, setPage] = useState(1);
+
+    const [loading, setLoading] = useState(true);
 
     const {auth} = useAuth();
 
@@ -18,6 +24,7 @@ export default function Species() {
             const res = await axios.get(`${import.meta.env.VITE_REACT_API_APP_PORT}/api/v1/users/getSpecies`);
             console.log(res.data);
             setSpecies(res.data.species);
+            setLoading(false);
 
         } catch (error) {
             console.log(error);
@@ -59,21 +66,25 @@ export default function Species() {
                     <h1 className='mb-5'>Speices</h1>
                     {/* Display books in form of cards */}
                     <div className="row">
-                        {species.map((sp) => (
-                             <div key={sp._id} className='col-md-4 mb-5'>
-                                <div className="card" style={{ width: '20rem' }}>
-                                    <img src={sp.image_url} className="card-img-top" />
-                                    <div className="card-body">
-                                        <h5 className="card-title">{sp.name}</h5>
-                                        <a href="#" className="btn btn-primary">Go somewhere</a>
-                                        <button className="btn btn-primary" onClick={(e) => {
-                                            e.preventDefault();
-                                            handleFavorite(sp._id);
-                                        }}>Add to Favorite</button>
+                        {loading ? <Spinner/> : species?.map((sp) => (
+                        <Link to={`/species/${sp._id}`} style={{ textDecoration: "none" }} className='col-md-6 mb-5'>
+                            <div key={sp._id} class="container mb-1">
+                                <div class="thecard d-flex align-items-center justify-content-center mb-5">
+                                    <div class="thefront skeleton d-flex align-items-center justify-content-center object-fit-scale">
+                                        <img className='img-front' src={sp.image_url} height={432} width={274}/>
+                                    </div>
+                                    <div class="theback">
+                                        <img src={sp.image_url2} height={432} width={274}/>
                                     </div>
                                 </div>
+                                <div className='d-flex flex-row align-items-center justify-content-center'>
+                                    <Link className="ch-btn" onClick={() => handleFavorite(sp._id)}>Add to  <StarIcon/></Link>
+                                    <Link className="ch-btn ms-5" to={`/species/${sp._id}`}>View Details</Link>
+                                </div>
                             </div>
-                        ))}
+                        </Link>
+                    )
+                    )}
                     </div>
                 </div>
             </div>
