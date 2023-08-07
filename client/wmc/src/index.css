@@ -208,6 +208,11 @@ bgvideo {
     background-repeat: no-repeat;
 }
 
+#shead {
+    font-family: 'Cinzel Decorative', cursive;
+    font-size: 2.7rem;
+}
+
 /* card flip css */
 
 .thecard{
@@ -644,6 +649,25 @@ bgvideo {
     color: aliceblue;
     font-family: 'Cinzel Decorative', cursive;
     font-size: 2.3rem;
+}
+
+#cdetails {
+    background-image: url("/Page04.png");
+    background-size: 100%;
+    font-family: 'Cinzel Decorative', cursive;
+    /* font-size: 2.3rem; */
+}
+
+#cdhead {
+    /* background-image: url("/Page04.png");
+    background-size: 100%; */
+    font-family: 'Cinzel Decorative', cursive;
+    /* font-size: 2.3rem; */
+}
+
+#comments {
+    background: aliceblue;
+    opacity: 0.7;
 }
 
 @media only screen and (max-width: 436px) {

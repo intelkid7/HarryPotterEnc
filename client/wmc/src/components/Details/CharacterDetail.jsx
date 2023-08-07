@@ -73,11 +73,11 @@ export default function CharacterDetail() {
 
 
     return (
-        <div>
+        <div id='cdetails'>
             <Navbar />
             <div className='d-flex align-items-center justify-content-center'>
                 <div className="col-md-10 text-light">
-                    <h1 className='my-5 title text-center'>Character Detail</h1>
+                    <h1 className='my-5 title text-center' id='cdhead'>Character Detail</h1>
                     {/* Display books in form of cards */}
                     <div className="row py-5 d-flex justify-content-center">
                         <div className="col-md-4 thefront skeleton d-flex align-items-center justify-content-center">
@@ -104,7 +104,7 @@ export default function CharacterDetail() {
                         <h1 className='mb-4'>Comments</h1>
                         <form onSubmit={handleComment(character?._id)}>
                             <div className="form-floating">
-                                <textarea className="form-control" placeholder="Leave a comment here" id="floatingTextarea" value={comment} onChange={(e) => setComment(e.target.value)} defaultValue={""} style={{ height: "100px" }} />
+                                <textarea className="form-control" placeholder="Leave a comment here" id="comments" value={comment} onChange={(e) => setComment(e.target.value)} defaultValue={""} style={{ height: "100px" }} />
                                 <label htmlFor="floatingTextarea">Comments</label>
                             </div>
                             <button className='btn btn-primary mt-3'>Add Comment</button>
