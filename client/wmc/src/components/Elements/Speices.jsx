@@ -60,7 +60,7 @@ export default function Species() {
     }   
 
     return (
-        <div>
+        <div id="speicesdiv">
             <Navbar />
                 <div className="text-light">
                     <h1 className='py-5 mb-5 title text-center'>Speices</h1>

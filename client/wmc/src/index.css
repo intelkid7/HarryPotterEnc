@@ -193,9 +193,19 @@ bgvideo {
     }
 }
 
-.sidebar {
+#sidebar {
     display: flex;
-    font-family: 'Elsie Swash Caps', cursive;
+    /* font-family: 'Elsie Swash Caps', cursive; */
+    font-family: 'Cinzel Decorative', cursive;
+    font-size: 1.6rem;
+}
+
+#speicesdiv {
+    background-image: url("forbidden.webp");
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 /* card flip css */
@@ -623,6 +633,11 @@ bgvideo {
     color: aliceblue;
     font-family: 'Cinzel Decorative', cursive;
     font-size: 1.7rem;
+}
+
+#sidebar2 {
+    font-family: 'Cinzel Decorative', cursive;
+    font-size: 1.7rem; 
 }
 
 #phead {
