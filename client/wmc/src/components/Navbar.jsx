@@ -80,7 +80,7 @@ export default function Navbar() {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-lg-0 navlist">
               <li className='nav-item'><NavLink className='nav-link' to="/about">About Us</NavLink></li>
-              <li className='nav-item'><NavLink className='nav-link' to="#">Home</NavLink></li>
+              <li className='nav-item'><NavLink className='nav-link' to="/home">Home</NavLink></li>
               <li className='nav-item'><NavLink className='nav-link' to="#" id="cu">Contact Us</NavLink></li>
               <li className='nav-item'><NavLink className='nav-link' to="#" onClick={handleClickOpen} id="cu">Explore</NavLink></li>
               {!auth.user ? (
@@ -118,7 +118,7 @@ export default function Navbar() {
                     <NavLink
                       className='nav-link'
                       onClick={handleLogOut}
-                      to="/"
+                      to="/login"
                     >
                       Logout
                     </NavLink>
@@ -148,7 +148,7 @@ export default function Navbar() {
         TransitionComponent={Transition}
         style={{opacity: "0.9"}}
       >
-        <div className=' h-100 w-100'>
+        <div className='h-100 w-100'>
           <div className="container-fluid dialog-div vertical-center fs-2 font2 flex-column">
             <Link to="/species" className="nav-link py-3 px-2">
               Species

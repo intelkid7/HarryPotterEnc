@@ -61,10 +61,10 @@ export default function Characters() {
     }
 
     return (
-        <div>
+        <div id='charmaindiv'>
             <Navbar />
             <div className="row">
-                <h1 className='my-5 text-center title'>Characters</h1>
+                <h1 className='my-5 text-center title' id='phead'>Characters</h1>
                 {/* Display books in form of cards */}
                 <div className="row d-flex align-items-center justify-content-center" style={{padding: "3% 12%"}}>
                     {loading ? <Spinner/> : characters?.map((ch) => (
@@ -93,17 +93,17 @@ export default function Characters() {
             <div className='d-flex align-items-center justify-content-center fs-3'>
                 <ul className="pagination justify-content-center">
                     <li className="page-item">
-                        <button className="page-link" href="#" onClick={() => setPage(page - 1)} aria-label="Previous"
+                        <button id='pnav' className="page-link" href="#" onClick={() => setPage(page - 1)} aria-label="Previous"
                             disabled={page === 1 ? true : false}
                         >
                             <span aria-hidden="true"> &laquo;</span>
                         </button>
                     </li>
-                    <li className="page-item"><a className="page-link" href="#" onClick={() => setPage(1)}>1</a></li>
-                    <li className="page-item"><a className="page-link" href="#" onClick={() => setPage(2)}>2</a></li>
-                    <li className="page-item"><a className="page-link" href="#" onClick={() => setPage(3)}>3</a></li>
+                    <li className="page-item"><a id='pnav' className="page-link" href="#" onClick={() => setPage(1)}>1</a></li>
+                    <li className="page-item"><a id='pnav' className="page-link" href="#" onClick={() => setPage(2)}>2</a></li>
+                    <li className="page-item"><a id='pnav' className="page-link" href="#" onClick={() => setPage(3)}>3</a></li>
                     <li className="page-item">
-                        <button className="page-link" href="#" onClick={() => setPage(page + 1)} aria-label="Next"
+                        <button id='pnav' className="page-link" href="#" onClick={() => setPage(page + 1)} aria-label="Next"
                             disabled={characters.length < pagesize ? true : false}
                         >
                             <span aria-hidden="true">&raquo;</span>

@@ -12,6 +12,7 @@ export default function Species() {
 
     const [species, setSpecies] = useState([]);
     const [page, setPage] = useState(1);
+    const pagesize = 4;
 
     const [loading, setLoading] = useState(true);
 
@@ -19,7 +20,7 @@ export default function Species() {
 
     const getSpells = async () => {
         try {
-            const res = await axios.get(`${import.meta.env.VITE_REACT_API_APP_PORT}/api/v1/users/getSpecies`);
+            const res = await axios.get(`${import.meta.env.VITE_REACT_API_APP_PORT}/api/v1/users/getSpecies?page=${page}&pagesize=${pagesize}`);
             console.log(res.data);
             setSpecies(res.data.species);
             setLoading(false);
@@ -84,6 +85,29 @@ export default function Species() {
                     )
                     )}
                 </div>
+            </div>
+
+            {/* Pagination */}
+            <div className='d-flex align-items-center justify-content-center fs-3'>
+                <ul className="pagination justify-content-center">
+                    <li className="page-item">
+                        <button id='pnav' className="page-link" href="#" onClick={() => setPage(page - 1)} aria-label="Previous"
+                            disabled={page === 1 ? true : false}
+                        >
+                            <span aria-hidden="true"> &laquo;</span>
+                        </button>
+                    </li>
+                    <li className="page-item"><a id='pnav' className="page-link" href="#" onClick={() => setPage(1)}>1</a></li>
+                    <li className="page-item"><a id='pnav' className="page-link" href="#" onClick={() => setPage(2)}>2</a></li>
+                    <li className="page-item"><a id='pnav' className="page-link" href="#" onClick={() => setPage(3)}>3</a></li>
+                    <li className="page-item">
+                        <button id='pnav' className="page-link" href="#" onClick={() => setPage(page + 1)} aria-label="Next"
+                            disabled={species.length < pagesize ? true : false}
+                        >
+                            <span aria-hidden="true">&raquo;</span>
+                        </button>
+                    </li>
+                </ul>
             </div>
         </div>
     )
