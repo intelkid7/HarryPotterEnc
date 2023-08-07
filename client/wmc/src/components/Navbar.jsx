@@ -118,7 +118,7 @@ export default function Navbar() {
                     <NavLink
                       className='nav-link'
                       onClick={handleLogOut}
-                      to="/"
+                      to="/login"
                     >
                       Logout
                     </NavLink>

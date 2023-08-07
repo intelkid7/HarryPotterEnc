@@ -31,7 +31,7 @@ export default function ForgotPass() {
                 });
                 localStorage.setItem("auth", JSON.stringify(res.data));
                 alert(res.data.message);
-                navigate(location.state || "/");
+                navigate(location.state || "/home");
             }
             else {
                 toast.error(res.data.message);
