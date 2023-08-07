@@ -63,7 +63,7 @@ export default function Species() {
         <div>
             <Navbar />
                 <div className="text-light">
-                    <h1 className='mb-5'>Speices</h1>
+                    <h1 className='py-5 mb-5 title text-center'>Speices</h1>
                     {/* Display books in form of cards */}
                     <div className="row">
                         {loading ? <Spinner/> : species?.map((sp) => (
