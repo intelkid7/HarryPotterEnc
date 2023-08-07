@@ -538,20 +538,20 @@ bgvideo {
     color: aliceblue;
 }
 
-#aboutus {
-    display: flex;
+/* #aboutus { */
+    /* display: flex; */
     /* position: absolute; */
-    justify-content: center;
-    align-items: center;
+    /* justify-content: center;
+    align-items: center; */
     /* padding: 4rem; */
-    background-image: url(castleintro.mp4);
+    /* background-image: url(castleintro.mp4);
     width: 100%;
     height: 100%;
     opacity: 0.8;
     height: 49.1rem;
     background-repeat: no-repeat;
-    background-size: cover;
-}
+    background-size: cover; */
+/* } */
 
 #ci {
     position: absolute;
@@ -561,9 +561,9 @@ bgvideo {
 }
 
 #abthead {
-    position: absolute;
+    /* position: absolute; */
     color: aliceblue;
-    align-items: center;
+    /* align-items: center; */
     text-align: center;
     font-family: 'Elsie Swash Caps', cursive;
 }
