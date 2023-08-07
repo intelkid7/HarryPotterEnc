@@ -71,7 +71,7 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="navbar sticky-top navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+      <nav className="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
         <div className="container-fluid">
           <div className="logo"><a href="#home"><img src={`${import.meta.env.VITE_REACT_API_APP}/Images/HogwartsLogo.png`} alt /></a></div>
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -126,7 +126,7 @@ export default function Navbar() {
                 </>
               )}
             </ul>
-            <form className="d-flex searchbar justify-content-end" role="search">
+            <form className="d-flex align-items-center searchbar justify-content-center" role="search">
               <input className="search px-2" type="text" id="srch" onChange={(e) => setSearch(e.target.value)} onClick={() => all_data.myfun01()} />
               <button type="submit" onClick={
                 () => {
