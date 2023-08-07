@@ -415,7 +415,7 @@ bgvideo {
     text-align: center;
     /* font-family: 'Elsie Swash Caps', cursive; */
     background: none;
-    background-image: url(riddle.png);
+    background-image: url(/riddle.png);
     /* background-size: cover; */
     height: 100vh;
     padding: 7rem 10rem;
