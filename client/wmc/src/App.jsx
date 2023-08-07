@@ -22,6 +22,7 @@ import CreateCharacter from './components/Admin/CreateCharacter';
 import CreateWand from './components/Admin/createWand';
 import About from './components/About';
 import Start from './components/Start';
+import SpeciesDetail from './components/Details/SpeciesDetail';
 
 function App() {
 
@@ -38,6 +39,7 @@ function App() {
         <Route path="/characters" element={<Characters />} />
         <Route path="/characters/:id" element={<CharacterDetail />} />
         <Route path="/species" element={<Species />} />
+        <Route path="/species/:id" element={<SpeciesDetail />} />
         <Route path="/spells" element={<Spells />} />
         <Route path="/spells/:id" element={<SpellsDetails />} />
         <Route path="/wands" element={<Wand />} />

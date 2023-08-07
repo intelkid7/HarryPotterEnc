@@ -3,8 +3,6 @@ import { Link } from 'react-router-dom'
 
 export default function Start() {
 
-    
-
   return (
     <div>
         <video id='ci' src="/castleintro2.mp4" autoPlay></video>
