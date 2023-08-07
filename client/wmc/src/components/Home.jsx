@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <>
       <Navbar />
-      <video src="/Library.mp4" autoPlay muted loop id='libvid'></video>
+      <video src="/Library.mp4" autoPlay id='libvid'></video>
       <div className='maindiv'>
         <h1 id='head01'>Welcome to the Hogwarts Library</h1>
         <h2 id='head02'>Enter</h2>

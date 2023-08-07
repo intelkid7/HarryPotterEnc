@@ -46,7 +46,7 @@ export default function Navbar() {
 
     localStorage.removeItem("auth");
     toast.success("Logout successfully");
-    navigate("/login");
+    navigate("/");
   }
 
   const getFavoriteCount = async () => {
@@ -73,14 +73,14 @@ export default function Navbar() {
     <>
       <nav className="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
         <div className="container-fluid">
-          <div className="logo"><a href="#home"><img src={`${import.meta.env.VITE_REACT_API_APP}/Images/HogwartsLogo.png`} alt /></a></div>
+          <div className="logo"><a href="#home"><img src={`/HogwartsLogo.png`} alt /></a></div>
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon" />
           </button>
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-lg-0 navlist">
               <li className='nav-item'><NavLink className='nav-link' to="/about">About Us</NavLink></li>
-              <li className='nav-item'><NavLink className='nav-link' to="#">Home</NavLink></li>
+              <li className='nav-item'><NavLink className='nav-link' to="/home">Home</NavLink></li>
               <li className='nav-item'><NavLink className='nav-link' to="#" id="cu">Contact Us</NavLink></li>
               <li className='nav-item'><NavLink className='nav-link' to="#" onClick={handleClickOpen} id="cu">Explore</NavLink></li>
               {!auth.user ? (
@@ -148,7 +148,7 @@ export default function Navbar() {
         TransitionComponent={Transition}
         style={{opacity: "0.9"}}
       >
-        <div className=' h-100 w-100'>
+        <div className='h-100 w-100'>
           <div className="container-fluid dialog-div vertical-center fs-2 font2 flex-column">
             <Link to="/species" className="nav-link py-3 px-2">
               Species

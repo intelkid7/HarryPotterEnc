@@ -5,6 +5,7 @@ export default function About() {
     <div id='aboutus'>
       <h1 id="abthead">About us</h1>
       <video id='ci' src="/castleintro2.mp4" autoPlay></video>
+      
     </div>
   )
 }
