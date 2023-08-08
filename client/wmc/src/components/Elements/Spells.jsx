@@ -57,13 +57,14 @@ export default function Spells() {
     }, [])
 
     return (
-        <div>
+        <div id="spelldiv">
             <Navbar />
             <div className="text-light d-flex align-items-center justify-content-center flex-column">
-                <h1 className='mb-5 title py-5'>Spells</h1>
+                <h1 id='spellhead' className='mb-5 title py-5'>Spells</h1>
                 <div className='row w-75'>
                     {spells.map((sp) => (
                         <Link to={`spells/${sp/_id}`} className="col-md-6 text-decoration-none" >
+
                             <div id="spellcard" className="container d-flex justify-content-center my-4 mb-5">
                                 <div id="mobile-box">
                                     <div className="card">
@@ -73,8 +74,8 @@ export default function Spells() {
 <div className="mask" style={{backgroundColor: 'rgba(251, 251, 251, 0.15)'}} />
                                             </Link>
                                         </div>
-                                        <div className="card-body text-center">
-                                            <h5 className="h5 font-weight-bold">{sp.name}</h5>
+                                        <div id='spellcard2' className="card-body text-center">
+                                            <h5 className="h5 fs-6 font-weight-bold">{sp.name}</h5>
                                             <p className="mb-0">Category : {sp.category}</p>
                                             <audio id={`${sp._id}`} preload="true">
                                                 <source src={`${import.meta.env.VITE_REACT_API_APP_PORT}/api/v1/users/spells/${sp._id}/audio`} />

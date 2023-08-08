@@ -21,20 +21,20 @@ export default function SpellsDetails() {
     }, [])
 
     return (
-        <div>
+        <div id='spdetails'>
             <Navbar />
             <div className="text-light">
-                <h1 className='my-5'>Spells Detail</h1>
+                <h1 id='spdhead' className='my-5'>Spell Details</h1>
                 {/* Display books in form of cards */}
                 <div className="row">
                     <div className="col-md-4">
-                        <img src={spell?.image_url} className="card-img-top" />
+                        <img id='spdimg' src={spell?.image_url} className="card-img-top" />
                     </div>
                     <div className="col-md-8">
                         <h1 className='mb-2'>{spell?.name}</h1>
                         <p className='mb-2'>{spell?.description}</p>
                         <p className='mb-2'>Type : {spell?.category}</p>
-                        <audio controls>
+                        <audio id='spdaudio'>
                             <source src={`${import.meta.env.VITE_REACT_API_APP_PORT}/api/v1/users/spells/${params.id}/audio`} type='audio/mp3' />
                         </audio> 
                     </div>
