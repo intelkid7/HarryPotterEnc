@@ -33,6 +33,7 @@ export default function Wand() {
     }
 
     useEffect(() => {
+        setLoading(true);
         getWands();
     }, [])
 

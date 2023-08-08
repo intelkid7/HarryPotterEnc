@@ -162,7 +162,7 @@ export default function Navbar() {
             <Link to="/spells" className="nav-link py-3 px-2">
               Spells
             </Link>
-            <Link to="/houses" className="nav-link py-3 px-2">
+            <Link to="/houseQuiz" className="nav-link py-3 px-2">
               Houses
             </Link>
             <Link to="/wands" className="nav-link py-3 px-2">
