@@ -38,7 +38,18 @@ function myfun01() {
 }
 
 function fade0(qArr, currentQuestion, setCurrentQuestion) {
-    var message = "Hello..." + qArr[currentQuestion].answer;
+
+    var message = ""
+    if(currentQuestion == 0){
+        message = "Hello..." + qArr[currentQuestion].answer;
+    }
+    else if(currentQuestion == 1){
+        message = "Great!...just one thing left"
+    }
+    else{
+        message = "Oh my bad!...confirm password please!"
+    }
+    
     document.getElementById('reghead0').style.animation = "fade-out 3s ease-out forwards";
     document.getElementById('reghead1').style.animation = "fade-out 3s ease-out forwards";
     document.getElementById('input01').style.animation = "fade-out 3s ease-out forwards";

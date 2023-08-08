@@ -619,7 +619,7 @@ bgvideo {
     position: absolute;
     /* height: fit-content; */
     width: 100%;
-    margin-top: -65px;
+    margin-top: -110px;
     animation: fade-in 8s ease-in 24s forwards;
 }
 
@@ -692,6 +692,17 @@ bgvideo {
 }
 
 @media only screen and (max-width: 436px) {
+
+    #hgl {
+        opacity: 0;
+        scale: 0.9;
+        position: absolute;
+        /* height: fit-content; */
+        width: 100%;
+        margin-top: -65px;
+        animation: fade-in 8s ease-in 24s forwards;
+    }
+
     #login {
         position: absolute;
         font-family: 'Cinzel Decorative', cursive;
@@ -771,3 +782,84 @@ bgvideo {
         animation: fade-in 3.5s ease-out 7s forwards;
     }
 }
+
+/* Spells Page Styling */
+
+#mobile-box {
+    width: 360px;
+  }
+  
+  .card {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+  }
+  
+  .card .view {
+    -webkit-border-top-left-radius: 10px;
+    border-top-left-radius: 10px;
+    -webkit-border-top-right-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  
+  .card h5 a {
+    color: #0d47a1;
+  }
+  
+  .card h5 a:hover {
+    color: #072f6b;
+  }
+  
+  #pButton {
+    float: left;
+  }
+  
+  #timeline {
+    width: 90%;
+    height: 2px;
+    margin-top: 20px;
+    margin-left: 10px;
+    float: left;
+    -webkit-border-radius: 15px;
+    border-radius: 15px;
+    background: rgba(0, 0, 0, 0.3);
+  }
+  
+  #pButton {
+    margin-top: 12px;
+    cursor: pointer;
+  }
+  
+  #playhead {
+    width: 8px;
+    height: 8px;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    margin-top: -3px;
+    background: black;
+    cursor: pointer;
+  }
+
+  .card-img-top{
+    display: block;
+    overflow: hidden;
+    width: 100%;
+    min-height: 20rem;
+    aspect-ratio: 8/9;
+    object-fit: cover;
+    object-position: center;
+    transition: 200ms transform ease-in-out;
+  }
+  
+  .card{
+    border: none;
+    box-shadow: 0 0 5px 0 rgba(0,0,0,0.22); 
+    overflow: hidden;
+  }
+  
+  .card-img-div{
+    overflow: hidden;
+  }
+  
+  .card:hover > .card-img-div > .card-img-top{
+    transform: scale(1.1);
+  }

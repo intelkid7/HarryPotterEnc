@@ -31,6 +31,7 @@ export default function Species() {
     }
 
     useEffect(() => {
+        setLoading(true);
         getSpells();
     }, [page]);
 

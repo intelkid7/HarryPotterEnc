@@ -33,6 +33,7 @@ export default function Characters() {
     }
 
     useEffect(() => {
+        setLoading(true);
         getCharacters();
     }, [page])
 
@@ -103,7 +104,8 @@ export default function Characters() {
                     <li className="page-item"><a id='pnav' className="page-link" href="#" onClick={() => setPage(2)}>2</a></li>
                     <li className="page-item"><a id='pnav' className="page-link" href="#" onClick={() => setPage(3)}>3</a></li>
                     <li className="page-item">
-                        <button id='pnav' className="page-link" href="#" onClick={() => setPage(page + 1)} aria-label="Next"
+                        <button id='pnav' className="page-link" href="#" onClick={() => 
+                        setPage(page + 1)} aria-label="Next"
                             disabled={characters.length < pagesize ? true : false}
                         >
                             <span aria-hidden="true">&raquo;</span>
