@@ -63,7 +63,7 @@ export default function Spells() {
                 <h1 id='spellhead' className='mb-5 title py-5'>Spells</h1>
                 <div className='row w-75'>
                     {spells.map((sp) => (
-                        <Link to={`spells/${sp/_id}`} className="col-md-6 text-decoration-none" >
+                        <Link to={`/spells/${sp._id}`} className="col-md-6 text-decoration-none" >
 
                             <div id="spellcard" className="container d-flex justify-content-center my-4 mb-5">
                                 <div id="mobile-box">

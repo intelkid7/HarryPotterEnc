@@ -71,10 +71,10 @@ export default function Species() {
                             <div key={sp._id} class="container mb-1">
                                 <div class="thecard d-flex align-items-center justify-content-center mb-5">
                                     <div class="thefront skeleton d-flex align-items-center justify-content-center object-fit-scale">
-                                        <img className='img-front' src={sp.image_url} height={432} width={274} />
+                                        <img id='spcscrd' className='img-front' src={sp.image_url} height={432} width={274} />
                                     </div>
                                     <div class="theback">
-                                        <img src={sp.image_url2} height={432} width={274} />
+                                        <img id='spcscrd' src={sp.image_url2} height={432} width={274} />
                                     </div>
                                 </div>
                                 <div className='d-flex flex-row align-items-center justify-content-center'>
