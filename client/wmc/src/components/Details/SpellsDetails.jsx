@@ -34,7 +34,7 @@ export default function SpellsDetails() {
                         <h1 className='mb-2'>{spell?.name}</h1>
                         <p className='mb-2'>{spell?.description}</p>
                         <p className='mb-2'>Type : {spell?.category}</p>
-                        <audio controls>
+                        <audio id='spdaudio'>
                             <source src={`${import.meta.env.VITE_REACT_API_APP_PORT}/api/v1/users/spells/${params.id}/audio`} type='audio/mp3' />
                         </audio> 
                     </div>

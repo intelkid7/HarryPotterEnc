@@ -730,8 +730,13 @@ bgvideo {
 }
 
 #spdimg {
-    scale: 0.7;
+    scale: 0.8;
     border-radius: 30px;
+    animation: float 2s ease-out infinite forwards;
+}
+
+#spdaudio {
+    background: black;
 }
 
 @media only screen and (max-width: 436px) {
