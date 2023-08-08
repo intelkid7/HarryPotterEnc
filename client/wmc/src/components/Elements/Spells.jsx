@@ -53,21 +53,21 @@ export default function Spells() {
     }, [])
 
     return (
-        <div>
+        <div id="spelldiv">
             <Navbar />
             <div className="text-light d-flex align-items-center justify-content-center flex-column">
-                <h1 className='mb-5 title py-5'>Spells</h1>
+                <h1 id='spellhead' className='mb-5 title py-5'>Spells</h1>
                 <div className='row w-75'>
                     {spells.map((sp) => (
                         <Link to={`/spells/${sp._id}`} className="col-md-6 text-decoration-none" >
-                            <div className="container d-flex justify-content-center my-4 mb-5">
+                            <div id="spellcard" className="container d-flex justify-content-center my-4 mb-5">
                                 <div id="mobile-box">
                                     <div className="card">
                                         <div className="bg-image hover-overlay ripple card-img-div" data-mdb-ripple-color="light">
                                             <img className="card-img-top" src={sp.image_url} alt="Card image cap" />
                                         </div>
-                                        <div className="card-body text-center">
-                                            <h5 className="h5 font-weight-bold">{sp.name}</h5>
+                                        <div id='spellcard2' className="card-body text-center">
+                                            <h5 className="h5 fs-6 font-weight-bold">{sp.name}</h5>
                                             <p className="mb-0">Category : {sp.category}</p>
                                             <audio id="music" preload="true">
                                                 <source src={`${import.meta.env.VITE_REACT_API_APP_PORT}/api/v1/users/spells/${sp._id}/audio`} />

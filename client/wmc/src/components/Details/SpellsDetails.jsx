@@ -21,14 +21,14 @@ export default function SpellsDetails() {
     }, [])
 
     return (
-        <div>
+        <div id='spdetails'>
             <Navbar />
             <div className="text-light">
-                <h1 className='my-5'>Spells Detail</h1>
+                <h1 id='spdhead' className='my-5'>Spell Details</h1>
                 {/* Display books in form of cards */}
                 <div className="row">
                     <div className="col-md-4">
-                        <img src={spell?.image_url} className="card-img-top" />
+                        <img id='spdimg' src={spell?.image_url} className="card-img-top" />
                     </div>
                     <div className="col-md-8">
                         <h1 className='mb-2'>{spell?.name}</h1>
