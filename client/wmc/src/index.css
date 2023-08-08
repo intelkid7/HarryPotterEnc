@@ -193,9 +193,24 @@ bgvideo {
     }
 }
 
-.sidebar {
+#sidebar {
     display: flex;
-    font-family: 'Elsie Swash Caps', cursive;
+    /* font-family: 'Elsie Swash Caps', cursive; */
+    font-family: 'Cinzel Decorative', cursive;
+    font-size: 1.6rem;
+}
+
+#speicesdiv {
+    background-image: url("forbidden.webp");
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#shead {
+    font-family: 'Cinzel Decorative', cursive;
+    font-size: 2.7rem;
 }
 
 /* card flip css */
@@ -625,10 +640,55 @@ bgvideo {
     font-size: 1.7rem;
 }
 
+#sidebar2 {
+    font-family: 'Cinzel Decorative', cursive;
+    font-size: 1.7rem; 
+}
+
 #phead {
     color: aliceblue;
     font-family: 'Cinzel Decorative', cursive;
     font-size: 2.3rem;
+}
+
+#cdetails {
+    background-image: url("/Page04.png");
+    background-size: 100%;
+    font-family: 'Cinzel Decorative', cursive;
+    /* font-size: 2.3rem; */
+}
+
+#cdhead {
+    /* background-image: url("/Page04.png");
+    background-size: 100%; */
+    font-family: 'Cinzel Decorative', cursive;
+    /* font-size: 2.3rem; */
+}
+
+#comments {
+    background: aliceblue;
+    opacity: 0.7;
+}
+
+#chead {
+    font-size: 2rem;
+}
+
+#addcbtn {
+    background: none;
+    border: none;
+    font-size: 1.4rem;
+}
+
+#addcbtn:hover {
+    cursor: pointer;
+    text-shadow: 0 0 8px rgb(255, 238, 0);
+    color: rgb(255, 234, 0);
+}
+
+#sphead {
+    color: rgb(255, 231, 35);
+    text-shadow: 0 0 8px rgb(255, 229, 35);
 }
 
 @media only screen and (max-width: 436px) {

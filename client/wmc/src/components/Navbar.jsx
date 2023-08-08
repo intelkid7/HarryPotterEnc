@@ -148,8 +148,8 @@ export default function Navbar() {
         TransitionComponent={Transition}
         style={{opacity: "0.9"}}
       >
-        <div className='h-100 w-100'>
-          <div className="container-fluid dialog-div vertical-center fs-2 font2 flex-column">
+        <div className=' h-100 w-100'>
+          <div className="container-fluid dialog-div vertical-center font2 flex-column" id='sidebar'>
             <Link to="/species" className="nav-link py-3 px-2">
               Species
             </Link>
