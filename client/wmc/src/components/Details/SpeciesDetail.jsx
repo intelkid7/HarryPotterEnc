@@ -69,18 +69,18 @@ export default function SpeciesDetail() {
 
 
     return (
-        <div>
+        <div id='cdetails'>
             <Navbar />
             <div className='d-flex align-items-center justify-content-center'>
                 <div className="col-md-10 text-light">
-                    <h1 className='my-5 title text-center'>Speices Detail</h1>
+                    <h1 className='my-5 title text-center' id='cdhead'>Speices Detail</h1>
                     {/* Display books in form of cards */}
                     <div className="row py-5 d-flex justify-content-center">
                         <div class="col-md-4 thefront skeleton d-flex align-items-center justify-content-center object-fit-scale">
                             <img className='img-front' src={species.image_url} height={432} width={274} />
                         </div>
                         <div className="col-md-8" style={{ padding: "0% 5%" }}>
-                            <h1 className='mb-2'>{species?.name}</h1>
+                            <h1 className='mb-2' id='sphead'>{species?.name}</h1>
                             <p className='mb-2'>{species?.description}</p>
                             <hr />
                             <p className='mb-2'>Classification : {species?.classification}</p>
@@ -90,13 +90,13 @@ export default function SpeciesDetail() {
                         </div>
                     </div>
                     <div className='p-4'>
-                        <h1 className='mb-4'>Comments</h1>
+                        <h1 className='mb-4' id='chead'>Comments</h1>
                         <form onSubmit={handleComment(species?._id)}>
                             <div className="form-floating">
-                                <textarea className="form-control" placeholder="Leave a comment here" id="floatingTextarea" value={comment} onChange={(e) => setComment(e.target.value)} defaultValue={""} style={{ height: "100px" }} />
+                                <textarea className="form-control" placeholder="Leave a comment here" id="comments" value={comment} onChange={(e) => setComment(e.target.value)} defaultValue={""} style={{ height: "100px" }} />
                                 <label htmlFor="floatingTextarea">Comments</label>
                             </div>
-                            <button className='btn btn-primary mt-3'>Add Comment</button>
+                            <button className='btn btn-primary mt-3' id='addcbtn'>Add Comment</button>
                         </form>
                     </div>
                     <div className='p-4 text-light'>

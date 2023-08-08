@@ -101,13 +101,13 @@ export default function CharacterDetail() {
                         </div>
                     </div>
                     <div className='p-4'>
-                        <h1 className='mb-4'>Comments</h1>
+                        <h1 className='mb-4' id='chead'>Comments</h1>
                         <form onSubmit={handleComment(character?._id)}>
                             <div className="form-floating">
                                 <textarea className="form-control" placeholder="Leave a comment here" id="comments" value={comment} onChange={(e) => setComment(e.target.value)} defaultValue={""} style={{ height: "100px" }} />
-                                <label htmlFor="floatingTextarea">Comments</label>
+                                <label htmlFor="floatingTextarea" >Comments</label>
                             </div>
-                            <button className='btn btn-primary mt-3'>Add Comment</button>
+                            <button className='btn btn-primary mt-3' id='addcbtn'>Add Comment</button>
                         </form>
                     </div>
                     <div className='p-4 text-light'>

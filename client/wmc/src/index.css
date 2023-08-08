@@ -670,6 +670,27 @@ bgvideo {
     opacity: 0.7;
 }
 
+#chead {
+    font-size: 2rem;
+}
+
+#addcbtn {
+    background: none;
+    border: none;
+    font-size: 1.4rem;
+}
+
+#addcbtn:hover {
+    cursor: pointer;
+    text-shadow: 0 0 8px rgb(255, 238, 0);
+    color: rgb(255, 234, 0);
+}
+
+#sphead {
+    color: rgb(255, 231, 35);
+    text-shadow: 0 0 8px rgb(255, 229, 35);
+}
+
 @media only screen and (max-width: 436px) {
     #login {
         position: absolute;
