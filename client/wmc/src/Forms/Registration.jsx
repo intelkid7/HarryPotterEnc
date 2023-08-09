@@ -30,7 +30,7 @@ const RegistrationForm = () => {
   const [currentQuestion, setCurrentQuestion] = useState(0);
 
   useEffect(() => {
-    
+
     if (currentQuestion == 0) {
       setStyle({
         ...style,
@@ -132,22 +132,24 @@ const RegistrationForm = () => {
   }
 
   return (
-    <div className='reg-div-1'>
-      <audio src="bgm01.mp3" autoPlay></audio>
-      <h1 className='reg-head-0' id='reghead0' style={style.headStyle}>Welcome to Hogwarts <br /> School of Witchcraft & Wizardry <br /> Please register yourself</h1>
-      <h1 className='reg-head-1' id='reghead1'>{qArr[currentQuestion].question}</h1>
-      <input className='reg-input' id='input01' type={currentQuestion == 2 || currentQuestion == 3 ? "password" : "text"} value={qArr[currentQuestion].answer} onChange={(e) => {
-        setState({
-          ...state,
-          [qArr[currentQuestion].stateName]: e.target.value,
-        })
-      }} />
-      <div className='nbdiv' id='nbdiv'>
-        <button id='nextbut02' className='reg-button' style={style.nextStyle} onClick={() => {all_data.fade0(qArr, currentQuestion, setCurrentQuestion)}}>--Next--</button>
-        <button id='subbut01' className='reg-button' style={style.submitStyle} onClick={handleSubmit}>--Submit--</button>
-        <button id='backbut01' className='reg-button' style={style.prevStyle} onClick={() => {
-          setCurrentQuestion(currentQuestion - 1);
-        }}>--Back--</button>
+    <div id='regdivbg'>
+      <div className='reg-div-1'>
+        <audio src="bgm01.mp3" autoPlay></audio>
+        <h1 className='reg-head-0' id='reghead0' style={style.headStyle}>Welcome to Hogwarts <br /> School of Witchcraft & Wizardry <br /> Please register yourself</h1>
+        <h1 className='reg-head-1' id='reghead1'>{qArr[currentQuestion].question}</h1>
+        <input className='reg-input' id='input01' type={currentQuestion == 2 || currentQuestion == 3 ? "password" : "text"} value={qArr[currentQuestion].answer} onChange={(e) => {
+          setState({
+            ...state,
+            [qArr[currentQuestion].stateName]: e.target.value,
+          })
+        }} />
+        <div className='nbdiv' id='nbdiv'>
+          <button id='nextbut02' className='reg-button' style={style.nextStyle} onClick={() => { all_data.fade0(qArr, currentQuestion, setCurrentQuestion) }}>--Next--</button>
+          <button id='subbut01' className='reg-button' style={style.submitStyle} onClick={handleSubmit}>--Submit--</button>
+          <button id='backbut01' className='reg-button' style={style.prevStyle} onClick={() => {
+            setCurrentQuestion(currentQuestion - 1);
+          }}>--Back--</button>
+        </div>
       </div>
     </div>
   );

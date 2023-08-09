@@ -76,16 +76,21 @@ export default function ForgotPass() {
                                 onChange={(e) => setPassword(e.target.value)}
                                 value={password}
                                 required
+                                id='linput'
                             />
                         </div>
                         <br />
-                        <button
-                            onClick={handleLoginSubmit}
-                            type="submit"
-                            className="btn btn-danger btn-lg w-100"
-                        >
-                            Submit
-                        </button>
+                        <div id='lbutdiv'>
+                            <button
+                                onClick={handleLoginSubmit}
+                                type="submit"
+                                className="btn btn-danger btn-lg"
+                                id='lbut'
+                            >
+                                Submit
+                            </button>
+                        </div>
+
                     </div>
                 </form>
             </div>

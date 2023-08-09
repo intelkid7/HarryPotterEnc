@@ -430,6 +430,7 @@ bgvideo {
 .reg-div-1 {
     display: flex;
     /* position: absolute; */
+    scale: 0.6;
     flex-direction: column;
     color: rgb(40, 0, 0);
     text-align: center;
@@ -441,13 +442,14 @@ bgvideo {
     padding: 7rem 10rem;
     align-items: center;
     justify-content: center;
+    animation: float 2s ease-out infinite forwards;
 }
 
 #reghead0 {
     opacity: 0;
     font-family: 'Estonia', cursive;
     font-size: 4rem;
-    animation: fade-in 7s ease-out 1s forwards;
+    animation: fade-in 5s ease-out 1s forwards;
     /* animation: fade-out 7s ease-out 1s forwards; */
     /* animation-delay: 10s; */
 }
@@ -456,7 +458,7 @@ bgvideo {
     opacity: 0;
     font-family: 'Estonia', cursive;
     font-size: 4rem;
-    animation: fade-in 6.5s ease-out 7s forwards;
+    animation: fade-in 4s ease-out 7s forwards;
     margin-top: 7rem;
     /* animation: fade-out 6.5s ease-out 7s forwards; */
 }
@@ -474,14 +476,14 @@ bgvideo {
     align-items: center;
     justify-content: center;
     border-bottom: 1px solid;
-    animation: fade-in 6.5s ease-out 7s forwards;
+    animation: fade-in 4s ease-out 7s forwards;
     /* animation: fade-out 6.5s ease-out 7s forwards; */
 }
 
 .reg-button {
     opacity: 0;
     margin-top: 2rem;
-    animation: fade-in 6.5s ease-out 7s forwards;
+    animation: fade-in 4s ease-out 7s forwards;
     /* animation: fade-out 6.5s ease-out 7s forwards; */
     font-family: 'La Belle Aurore', cursive;
     font-size: 2.5rem;
@@ -495,7 +497,7 @@ bgvideo {
     opacity: 0;
     font-family: 'La Belle Aurore', cursive;
     font-size: 4rem;
-    animation: fade-in 6.5s ease-out 7s forwards;
+    animation: fade-in 4s ease-out 7s forwards;
     /* animation: fade-out 6.5s ease-out 7s forwards; */
     /* margin-top: 12rem; */
 }
@@ -774,6 +776,7 @@ bgvideo {
     background-repeat: no-repeat;
     width: 100%;
     height: 100vh;
+    color: aquamarine;
     align-items: center;
     justify-content: center;
     flex-direction: column;
@@ -798,7 +801,35 @@ bgvideo {
 
 #linput {
     background: none;
-    border-bottom:solid white;
+    outline: none;
+    border: none;
+    border-radius: 0;
+    color: aquamarine;
+    text-shadow: 0 0 8px aquamarine;
+    border-bottom: solid 1px white;
+}
+
+#lbut {
+    width: 50%;
+    background: rgba(0,0,0,0.22);
+}
+
+#lbut:hover {
+    width: 50%;
+    box-shadow: 0 0 10px red;
+}
+
+#lbutdiv {
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#regdivbg {
+    background: url("harryletters.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 @media only screen and (max-width: 436px) {
 
@@ -837,9 +868,27 @@ bgvideo {
         font-family: 'Estonia', cursive;
         font-size: 2.5rem;
         width: 20rem;
-        animation: fade-in 7s ease-out 1s forwards;
+        animation: fade-in 5s ease-out 1s forwards;
         /* animation: fade-out 7s ease-out 1s forwards; */
         /* animation-delay: 10s; */
+    }
+
+    .reg-div-1 {
+        display: flex;
+        /* position: absolute; */
+        scale: 0.6;
+        flex-direction: column;
+        color: rgb(40, 0, 0);
+        text-align: center;
+        /* font-family: 'Elsie Swash Caps', cursive; */
+        background: none;
+        background-image: url(/riddle.png);
+        /* background-size: cover; */
+        height: 100vh;
+        padding: 7rem 10rem;
+        align-items: center;
+        justify-content: center;
+        animation: float 2s ease-out infinite forwards;
     }
     
     .reg-head-1 {
@@ -847,7 +896,7 @@ bgvideo {
         font-family: 'Estonia', cursive;
         font-size: 2.5rem;
         width: 20rem;
-        animation: fade-in 6.5s ease-out 7s forwards;
+        animation: fade-in 4s ease-out 5s forwards;
         margin-top: 7rem;
         /* animation: fade-out 6.5s ease-out 7s forwards; */
     }
@@ -865,14 +914,14 @@ bgvideo {
         align-items: center;
         justify-content: center;
         border-bottom: 1px solid;
-        animation: fade-in 6.5s ease-out 7s forwards;
+        animation: fade-in 4s ease-out 5s forwards;
         /* animation: fade-out 6.5s ease-out 7s forwards; */
     }
     
     .reg-button {
         opacity: 0;
         margin-top: 2rem;
-        animation: fade-in 6.5s ease-out 7s forwards;
+        animation: fade-in 4s ease-out 5s forwards;
         /* animation: fade-out 6.5s ease-out 7s forwards; */
         font-family: 'La Belle Aurore', cursive;
         font-size: 1.5rem;
@@ -886,13 +935,23 @@ bgvideo {
         opacity: 0;
         font-family: 'La Belle Aurore', cursive;
         font-size: 2.5rem;
-        animation: fade-in 6.5s ease-out 7s forwards;
+        animation: fade-in 4s ease-out 5s forwards;
         /* animation: fade-out 6.5s ease-out 7s forwards; */
         /* margin-top: 12rem; */
     }
     
     #subbut {
+        animation: fade-in 3.5s ease-out 5s forwards;
+    }
+
+    .nbdiv {
+        opacity: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         animation: fade-in 3.5s ease-out 7s forwards;
+        width: 100%;
+        text-align: center;
     }
 }
 
