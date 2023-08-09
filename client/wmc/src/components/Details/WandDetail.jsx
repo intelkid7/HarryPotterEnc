@@ -34,7 +34,7 @@ export default function WandDetail() {
     console.log(wand);
 
     return (
-        <div>
+        <div id = "wdiv">
             <Navbar />
 
             <div className="row d-flex align-items-center justify-content-center" style={{ padding: "5% 10%" }}>

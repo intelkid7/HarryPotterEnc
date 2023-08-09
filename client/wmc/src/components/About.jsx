@@ -3,7 +3,7 @@ import Navbar from './Navbar'
 
 export default function About() {
   return (
-    <>
+    <div id="adiv">
     <Navbar />
     <div id='aboutus' className='d-flex align-items-center justify-content-center flex-column'>
       <h1 id="abthead" className='py-5 mb-5'>About us</h1>
@@ -31,6 +31,6 @@ export default function About() {
         </div>
       </div>
     </div>
-    </>
+    </div>
   )
 }

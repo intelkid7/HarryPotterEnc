@@ -47,43 +47,48 @@ export default function ForgotPass() {
     }
 
     return (
-        <div className="register text-light d-flex align-items-center justify-content-center" style={{padding: "5% 17%"}}>
-            <form style={{ width: "500px" }}>
-                <div id="regiterDiv">
-                    <div className="mb-3">
-                        <label htmlFor="exampleInputName" className="form-label">
-                            Email
-                        </label>
-                        <input
-                            type="email"
-                            className="form-control"
-                            onChange={(e) => setEmail(e.target.value)}
-                            value={email}
-                            required
-                        />
+        <div>
+            <div id='ldiv' className="text-light d-flex align-items-center justify-content-center" style={{ padding: "5% 17%" }}>
+                <form id='loginf' style={{ width: "500px" }}>
+                    <h1 id='loghead'>Login</h1>
+                    <div id="regiterDiv">
+                        <div className="mb-3">
+                            <label htmlFor="exampleInputName" className="form-label">
+                                Email
+                            </label>
+                            <input
+                                type="email"
+                                className="form-control"
+                                onChange={(e) => setEmail(e.target.value)}
+                                value={email}
+                                required
+                                id='linput'
+                            />
+                        </div>
+                        <br />
+                        <div className="mb-3">
+                            <label htmlFor="exampleInputPassword1" className="form-label">
+                                Password
+                            </label>
+                            <input
+                                type="password"
+                                className="form-control"
+                                onChange={(e) => setPassword(e.target.value)}
+                                value={password}
+                                required
+                            />
+                        </div>
+                        <br />
+                        <button
+                            onClick={handleLoginSubmit}
+                            type="submit"
+                            className="btn btn-danger btn-lg w-100"
+                        >
+                            Submit
+                        </button>
                     </div>
-                    <div className="mb-3">
-                        <label htmlFor="exampleInputPassword1" className="form-label">
-                            Password
-                        </label>
-                        <input
-                            type="password"
-                            className="form-control"
-                            onChange={(e) => setPassword(e.target.value)}
-                            value={password}
-                            required
-                        />
-                    </div>
-
-                    <button
-                        onClick={handleLoginSubmit}
-                        type="submit"
-                        className="btn btn-danger btn-lg w-100"
-                    >
-                        Submit
-                    </button>
-                </div>
-            </form>
+                </form>
+            </div>
         </div>
     )
 }
