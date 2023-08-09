@@ -79,7 +79,7 @@ export default function HouseQuize() {
             <div id='sortq' className="container text-light" style={{ padding: "5% 15%" }}>
                 <form onSubmit={handleSubmit} id='sortform'>
                     <h1 id="quizhead">Answer the questions of the hat and help it to sort you in...</h1>
-                    <div className="mb-4">
+                    <div className="mb-5">
                         <p>Question 1: What trait do you value the most in a friend?</p>
                         <div>
                             <div className="form-check">
@@ -110,7 +110,7 @@ export default function HouseQuize() {
                         </div>
                     </div>
 
-                    <div className="mb-4">
+                    <div className="mb-5">
                         <p>Question 2: Which subject at Hogwarts do you find most fascinating?</p>
                         <div>
                             <div className="form-check">
@@ -164,7 +164,7 @@ export default function HouseQuize() {
                         </div>
                     </div>
 
-                    <div className="mb-4">
+                    <div className="mb-5">
                         <p>Question 3: Which magical creature appeals to you the most?</p>
                         <div>
                             <div className="form-check">
@@ -218,7 +218,7 @@ export default function HouseQuize() {
                         </div>
                     </div>
 
-                    <div className="mb-4">
+                    <div className="mb-5">
                         <p>Question 4: You have a challenging task ahead. What approach do you take?</p>
                         <div className="form-check">
                             <input
@@ -270,7 +270,7 @@ export default function HouseQuize() {
                         </div>
                     </div>
 
-                    <div className="mb-4">
+                    <div className="mb-5">
                         <p>Question 5: What is your favorite magical item?</p>
                         <div className="form-check">
                             <input
@@ -322,7 +322,7 @@ export default function HouseQuize() {
                         </div>
                     </div>
 
-                    <div className="mb-4">
+                    <div className="mb-5">
                         <p>Question 6: Which Deathly Hallow would you choose to possess?</p>
                         <div className="form-check">
                             <input
@@ -374,7 +374,7 @@ export default function HouseQuize() {
                         </div>
                     </div>
 
-                    <div className="mb-4">
+                    <div className="mb-5">
                         <p>Question 7: What is your preferred Quidditch position?</p>
                         <div className="form-check">
                             <input
@@ -426,7 +426,7 @@ export default function HouseQuize() {
                         </div>
                     </div>
 
-                    <div className="mb-4">
+                    <div className="mb-5">
                         <p>Question 8: If given a choice, where would you spend your free time at Hogwarts?</p>
                         <div className="form-check">
                             <input
@@ -478,8 +478,8 @@ export default function HouseQuize() {
                         </div>
                     </div>
 
-                    <button type="submit" className="btn btn-primary me-3">Submit</button>
-                    <button className="btn btn-primary" onClick={handleReset}> Reset</button>
+                    <button type="submit" className="btn btn-primary me-3 mb-5">Submit</button>
+                    <button className="btn btn-primary mb-5" onClick={handleReset}> Reset</button>
                 </form>
             </div>
         </div>
