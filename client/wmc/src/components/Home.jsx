@@ -14,7 +14,6 @@ export default function Home() {
       <video src="/Library.mp4" autoPlay id='libvid'></video>
       <div className='maindiv'>
         <h1 id='head01'>Welcome to the Hogwarts Library</h1>
-        <h2 id='head02'>Enter</h2>
       </div>
 
       <div id="fdivp">

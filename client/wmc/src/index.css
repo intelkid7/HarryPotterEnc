@@ -41,8 +41,6 @@ bgvideo {
     opacity: 1;
     background: url("riddle.png");
     padding: 4rem;
-    position: absolute;
-    width: 50%;
     background-size: cover;
     font-family: 'Cinzel Decorative', cursive;
     font-size: 1.3rem;
@@ -871,6 +869,19 @@ bgvideo {
         font-size: 2rem;
     }
 
+    #sortform {
+        opacity: 1;
+        background: url("riddle.png");
+        padding: 4rem;
+        /* position: absolute;*/
+        background-size: cover;
+        font-family: 'Cinzel Decorative', cursive;
+        font-size: 1.3rem;
+        animation: fade-in 2s ease-in 50s forwards;
+        animation: float 3s ease-out infinite forwards;
+        color: rgb(31, 0, 0);
+    }
+
     #fdivhead {
         font-size: 1rem;
     }
@@ -1106,4 +1117,12 @@ bgvideo {
   
   .card:hover > .card-img-div > .card-img-top{
     transform: scale(1.1);
+  }
+
+  #sortq{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
   }

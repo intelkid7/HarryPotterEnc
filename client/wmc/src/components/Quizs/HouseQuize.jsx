@@ -73,7 +73,7 @@ export default function HouseQuize() {
     };
 
     return (
-        <div className="housequiz" id='housequiz'>
+        <div className="housequiz" id='housequiz' >
             {/* <audio src="/SortIntroAudio.mp3" autoPlay></audio> */}
             <video id='bgvid' src="/SortIntro01.mp4" autoPlay></video>
             <div id='sortq' className="container text-light" style={{ padding: "5% 15%" }}>
