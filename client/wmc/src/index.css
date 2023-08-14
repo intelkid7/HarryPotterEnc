@@ -851,7 +851,7 @@ bgvideo {
 }
 
 #regdivbg {
-    background: url("harryletters.webp");
+    background-image: url("/harryletters.webp");
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -871,7 +871,7 @@ bgvideo {
 
     #sortform {
         opacity: 1;
-        background: url("riddle.png");
+        background: url("/riddle.png");
         padding: 4rem;
         /* position: absolute;*/
         background-size: cover;
