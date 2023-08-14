@@ -39,7 +39,7 @@ bgvideo {
 
 #sortform {
     opacity: 1;
-    background: url("riddle.png");
+    background: url("/riddle.png");
     padding: 4rem;
     background-size: cover;
     font-family: 'Cinzel Decorative', cursive;
@@ -225,7 +225,7 @@ bgvideo {
 }
 
 #speicesdiv {
-    background-image: url("forbidden.webp");
+    background-image: url("/forbidden.webp");
     width: 100%;
     height: 100%;
     background-size: cover;
@@ -656,7 +656,7 @@ bgvideo {
 }
 
 #charmaindiv {
-    background-image: url("library.webp");
+    background-image: url("/library.webp");
     background-size: cover;
     opacity: 0.7;
     width: 100%;
@@ -724,7 +724,7 @@ bgvideo {
 }
 
 #spelldiv {
-    background-image: url("patronus.jpg");
+    background-image: url("/patronus.jpg");
     width: 100%;
     height: 100%;
     background-size: cover;
@@ -775,14 +775,14 @@ bgvideo {
 }
 
 #adiv {
-    background: url("castlenight.png");
+    background: url("/castlenight.png");
     height: 100%;
     width: 100%;
     background-size: cover;
 }
 
 #wdiv {
-    background: url("ollivanders4.jpg");
+    background: url("/ollivanders4.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -795,7 +795,7 @@ bgvideo {
 }
 
 #ldiv {
-    background: url("hogwartsentry1.jpg");
+    background: url("/hogwartsentry1.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
