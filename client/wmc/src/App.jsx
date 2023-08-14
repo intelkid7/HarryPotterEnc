@@ -18,8 +18,8 @@ import Favorite from './components/Favorite';
 import PrivateRoute from './Routes/Private';
 import SpellsDetails from './components/Details/SpellsDetails';
 import HouseQuize from './components/Quizs/HouseQuize';
-import CreateCharacter from './components/Admin/CreateCharacter';
-import CreateWand from './components/Admin/createWand';
+// import CreateCharacter from './components/Admin/CreateCharacter';
+// import CreateWand from './components/Admin/createWand';
 import About from './components/About';
 import Start from './components/Start';
 import SpeciesDetail from './components/Details/SpeciesDetail';
@@ -30,8 +30,8 @@ function App() {
     <div onMouseMove={all_data.myfun00()}>
       <Routes>
         <Route path="/" element={<Start />} />
-        <Route path="/createCharacter" element={<CreateCharacter />} />
-        <Route path="/createWand" element={<CreateWand />} />
+        {/* <Route path="/createCharacter" element={<CreateCharacter />} />
+        <Route path="/createWand" element={<CreateWand />} /> */}
         <Route path="/home" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/explore" element={<Explore />} />
